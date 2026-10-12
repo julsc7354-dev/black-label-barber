@@ -1,0 +1,289 @@
+/* ESTILOS GENERALES DE LA PÁGINA*/
+
+body {
+    background-color: #111111;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/*CABECERA DE LA BERBERIA*/
+
+header{
+    text-align:center;
+    padding:30px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+h1{
+    color: #D4AF37;
+    font-size: 36px;
+}
+
+
+/* MENÚ DE NAVEGACIÓN */
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 15px;
+    transition: 0.3s;
+}
+
+
+/*SECCIÓN PRINCIPAL*/
+
+#inicio{
+    text-align: center;
+    padding: 12px 0px;
+}
+
+
+/* TÍTULO DE PRESENTACIÓN "tu estilo, nuestra pasión"*/
+
+#inicio h2{
+    color: #D4AF37;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+
+/* DESCRIPCIÓN DE PRESENTACIÓN "cortes clásicos, modernos y una experiencia única"*/ 
+
+#inicio p{
+    color:#FFFFFF;
+    font-size: 18px;
+}
+
+
+/* BOTÓN DE RESERVACIÓN*/
+
+.boton-reserva{
+    display: inline-block;
+    background-color: #25D366;
+    color: #FFFFFF;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+
+
+
+/* SECCIÓN DE SERVICIOS */
+
+#servicios{
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1A1A1A;  /*ESTOY ESTABLECIENDO UN COLOR DE FONDO EN TODA LA SECCIÓN*/
+    
+    background-image: linear-gradient(
+        rgba(0,0,0,0.65), 
+        rgba(0,0,0,0.65)), url("Imagenes/servicios.png");
+    
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/* TÍTULO DE SERVICIOS*/
+
+#servicios h2{
+    color: #D4AF37;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* TARJETA DE SERVICIOS */
+
+.tarjeta-servicio {
+    background-color: rgba(0,0,0,0.75);
+    border: 1px solid #D4AF37;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 350px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ese;
+}
+.tarjeta-servicio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.20);
+}
+
+
+
+
+/* PRECIO DE LOS SERVICIOS */
+
+.precio{
+    color: #D4AF37;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+/* CONTENEDOR DE SERVICIOS*/
+
+.contenedor-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenedor-servicios .tarjeta-servicio {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/*SECCIÓN NUESTRA EXPERIENCIA*/
+
+#experiencia {
+    background-color: #181818;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#experiencia h2 {
+    color: #D4AF37;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*SECCIÓN DE CONTACTO*/
+
+#contacto {
+    background-color: #111111;
+    text-align: center;
+    padding: 70px 20px;
+}
+#contacto h2 {
+    color: #D4AF37;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+#contacto h3 {
+    color: #D4AF37;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+
+
+
+
+/*IMAGEN PRINCIPAL DE LA BARBERÍA*/
+
+.imagen-barberia {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 0;
+}
+
+
+
+
+/* EFECTO AL PASAR EL CURSOR "cuando paso el cursor en inicio, servicios y contacto, se cambia de color*/
+
+nav a:hover{
+    color:#D4AF37;
+}
+
+
+
+
+
+
+/*DISEÑO PARA CELULARES*/
+
+@media (max-width: 600px) {
+
+    .contenedor-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    /* MENÚ PARA CELULARES */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    /* INICIO EN CELULARES */
+    #inicio {
+        padding: 20px 20px 35px;
+    }
+
+    .imagen-barberia {
+        width: calc(100% + 40px);
+        max-width: none;
+        margin-left: -20px;
+        margin-right: 0;
+    }
+
+    /*EXPERIENCIA EN CELULARES*/
+    #experiencia {
+    padding: 35px 20px;}
+
+    /* CONTACTO EN CELULARES */
+    #contacto {
+    padding: 40px 20px;}
+}
+
+
+
+
+
+
+
+
+/*PIE DE PÁGINA*/
+
+footer{
+    background-color: #111111;
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid #D4AF37;
+}
+footer{
+    color: #AAAAAA;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/*AVISO DE DEMOSTRACIÓN*/
+ 
+.aviso-demo {
+    color: #888888;
+    font-size: 12px;
+    margin-top: 12px;
+}
